@@ -1,10 +1,47 @@
 #include <stdio.h>
+#include<stdlib.h>
+#include <string.h> 
 
-int main(){
-    printf("<<  >>\n");
-
+struct Endereco
+{
+    char rua[15];
+    char numero[6];
+    char complemento[15];
+    char cidade[15];
+    char estado[15];
+    char CEP[15];
+};
+int main()
+{   struct Endereco d[3];
+    int igual;
+    char est[3]="MG";
+    for(int i=0;i<3;i++)
+    {    
+        printf("Digite a rua %c\n", i++);
+        gets(d[i].rua);
+        printf("Digite o numero %c\n", i++);
+        gets(d[i].numero);
+        printf("Digite o complemento %c\n", i++);
+        gets(d[i].complemento);
+        printf("Digite a cidade %c\n", i++);         
+        gets(d[i].cidade);
+        printf("Digite o estado %c\n", i++);
+        gets(d[i].estado);
+         printf("Digite o CEP %c\n", i++);
+        gets(d[i].CEP);
+        printf("\n");
+    }           
+    for(int i=0;i<3;i++)
+    {    
+         if(d[i].estado =="MG")
+            printf("\nEndereco %c:\t%c\t%c\t%c\t %c\t%c\t%c\n",d[i].rua, d[i].numero, d[i].complemento,d[i].cidade,d[i].estado,d[i].cep, d[i].);
+    }
+       
+    system("pause");
     return 0;
 }
+
+
 
 /*
 1) Crie uma estrutura chamada endereco, que armazena Rua, Número, Complemento,

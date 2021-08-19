@@ -1,8 +1,38 @@
+
 #include <stdio.h>
+#include<stdlib.h>
+#include <string.h> 
 
-int main(){
-    printf("<<  >>\n");
+struct Data{
+    char dia[3];
+    char mes[3];
+    char ano[5];
+};
 
+int main()
+{  
+    struct Data d[3];
+    int maior=0;
+    for(int i=0;i==3;i++)
+    {
+        printf("Digite o dia %c\n", i++);
+        gets(d[i].dia);
+        printf("Digite o mes %c\n", i++);
+        gets(d[i].mes);
+        printf("Digite o ano %c\n", i++);
+        gets(d[i].ano);
+        printf("\n");
+        if(maior <= d[i].ano)
+         maior=d[i].ano;
+
+    }
+    for(int i=0;i<3;i++)
+    {
+        printf("\nTelefone1:%c/t%c/t%c\n",d[i].dia,d[i].mes[i],d[i].ano);
+    }
+    
+    
+    system("pause");
     return 0;
 }
 
